@@ -4,5 +4,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "ref recibido: ${{ github.ref }}"
-      - run: ls -la
+      - name: print ref
+        run: |
+          echo "ref recibido: ${{ github.ref }}"
+      - name: list files
+        run: |
+          ls -la
